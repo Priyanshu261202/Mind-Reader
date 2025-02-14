@@ -21,12 +21,12 @@ let textIndex = 0;
 function startReading() {
     const number = document.getElementById('numberInput').value;
     if (number >= 1 && number <= 10) {
-        // Hide input screen and show loading screen
+       
         inputScreen.classList.add('hidden');
         loadingScreen.classList.remove('hidden');
         resultScreen.classList.add('hidden');
         
-        // Reset progress
+       
         progress = 0;
         textIndex = 0;
         progressBar.style.width = '0%';
@@ -51,24 +51,23 @@ function startReading() {
 }
 
 function showResult(number) {
-    // Hide loading screen and show result screen
+    
     loadingScreen.classList.add('hidden');
     resultScreen.classList.remove('hidden');
     
-    // Display the number
+    
     resultNumber.textContent = number;
 }
 
 function resetGame() {
-    // Reset input
+ 
     document.getElementById('numberInput').value = '';
     
-    // Show input screen, hide others
+
     inputScreen.classList.remove('hidden');
     loadingScreen.classList.add('hidden');
     resultScreen.classList.add('hidden');
-    
-    // Reset progress bar and text
+  
     progress = 0;
     textIndex = 0;
     progressBar.style.width = '0%';
