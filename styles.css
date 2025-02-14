@@ -253,9 +253,11 @@ button:active {
         transition: none;
     }
 }
+
+
 .nav-bar {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -287,6 +289,7 @@ button:active {
 @media (max-width: 768px) {
     .nav-bar {
         padding: 8px 15px;
+        top: 15px;
     }
 
     .about-link {
@@ -302,6 +305,7 @@ button:active {
 @media (max-width: 480px) {
     .nav-bar {
         padding: 5px 10px;
+        top: 10px;
     }
 
     .about-link {
