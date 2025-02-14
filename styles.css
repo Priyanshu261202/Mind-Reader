@@ -1,9 +1,7 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
                  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
                  'Helvetica Neue', sans-serif;
@@ -11,7 +9,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 :root {
     --primary-color: #9333ea;
@@ -25,10 +22,8 @@
     --input-bg: #f8fafc;
 }
 
-
 body {
     min-height: 100vh;
-   
     min-height: 100dvh;
     background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
     display: flex;
@@ -37,8 +32,8 @@ body {
     padding: 16px;
     touch-action: manipulation;
     margin: 0;
+    position: relative;
 }
-
 
 .card {
     background: var(--card-bg);
@@ -49,8 +44,8 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     position: relative;
     isolation: isolate;
+    margin: auto;
 }
-
 
 .container {
     text-align: center;
@@ -59,7 +54,6 @@ body {
 .hidden {
     display: none !important;
 }
-
 
 h1, h2 {
     color: var(--text-primary);
@@ -82,7 +76,6 @@ p {
     line-height: 1.5;
 }
 
-
 input {
     width: 100%;
     padding: 16px;
@@ -93,12 +86,10 @@ input {
     text-align: center;
     background: var(--input-bg);
     transition: border-color 0.2s ease;
-    
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: textfield;
 }
-
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -111,7 +102,6 @@ input:focus {
     outline: none;
     border-color: var(--primary-color);
 }
-
 
 button {
     width: 100%;
@@ -126,11 +116,9 @@ button {
     transition: all 0.2s ease;
     transform: translateY(0);
     box-shadow: 0 4px 6px rgba(147, 51, 234, 0.1);
-
     user-select: none;
     -webkit-user-select: none;
 }
-
 
 .progress-container {
     width: 100%;
@@ -149,7 +137,6 @@ button {
     transition: width 0.3s ease;
     border-radius: 10px;
 }
-
 
 .loading-text {
     min-height: 60px;
@@ -183,7 +170,6 @@ button {
     100% { transform: scale(1) rotate(0deg); }
 }
 
-
 @media (hover: hover) and (pointer: fine) {
     button:hover {
         background: var(--primary-dark);
@@ -192,66 +178,9 @@ button {
     }
 }
 
-
 button:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(147, 51, 234, 0.1);
-}
-
-
-@media (max-height: 600px) and (orientation: landscape) {
-    .card {
-        margin: 10px;
-        padding: 16px;
-    }
-    
-    .loading-text {
-        min-height: 40px;
-    }
-    
-    .result-number {
-        margin: 12px 0;
-    }
-    
-    .sparkles {
-        margin-bottom: 8px;
-    }
-}
-
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --card-bg: rgba(255, 255, 255, 0.9);
-        --text-primary: #1a1a1a;
-        --text-secondary: #4a4a4a;
-        --input-bg: #ffffff;
-    }
-}
-
-
-@media (forced-colors: active) {
-    button {
-        border: 2px solid ButtonText;
-    }
-    
-    .progress-bar {
-        background: Highlight;
-    }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-    .sparkles {
-        animation: none;
-    }
-    
-    .progress-bar {
-        transition: none;
-    }
-    
-    button {
-        transition: none;
-    }
 }
 
 .nav-bar {
@@ -281,45 +210,91 @@ button:active {
     transform: translateY(-2px);
 }
 
-.card {
-    margin-top: 40px;
-}
-
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
     .nav-bar {
         padding: 8px 15px;
-        top: 35px;
+        top: 20px;
     }
 
     .about-link {
         font-size: 1em;
         padding: 7px 14px;
     }
-
-    .card {
-        margin-top: 60px;
-    }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     .nav-bar {
         padding: 5px 10px;
-        top: 45px;
+        top: 25px;
     }
 
     .about-link {
         font-size: 0.8em;
         padding: 4px 10px;
     }
-
-    .card {
-        margin-top: 80px;
-    }
 }
 
 @media (max-height: 600px) and (orientation: landscape) {
-    .card {
-        margin: 10px;
+    body {
         padding: 16px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .loading-text {
+        min-height: 40px;
+    }
+
+    .result-number {
+        margin: 12px 0;
+    }
+
+    .sparkles {
+        margin-bottom: 8px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --card-bg: rgba(255, 255, 255, 0.9);
+        --text-primary: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --input-bg: #ffffff;
+    }
+}
+
+@media (forced-colors: active) {
+    button {
+        border: 2px solid ButtonText;
+    }
+
+    .progress-bar {
+        background: Highlight;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sparkles {
+        animation: none;
+    }
+
+    .progress-bar {
+        transition: none;
+    }
+
+    button {
+        transition: none;
     }
 }
