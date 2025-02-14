@@ -254,25 +254,26 @@ button:active {
         transition: none;
     }
 }
-
 .nav-bar {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
     z-index: 10;
+    text-align: center;
 }
 
 .about-link {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 8px 16px;
+    font-size: 1em;
+    padding: 6px 14px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
+    display: inline-block;
 }
 
 .about-link:hover {
@@ -280,7 +281,37 @@ button:active {
     transform: translateY(-2px);
 }
 
-
 .card {
-    margin-top: 40px;
+    margin-top: 80px; 
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 8px 15px;
+    }
+
+    .about-link {
+        font-size: 0.9em;
+        padding: 5px 12px;
+    }
+
+    .card {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 5px 10px;
+    }
+
+    .about-link {
+        font-size: 0.8em;
+        padding: 4px 10px;
+    }
+
+    .card {
+        margin-top: 60px;
+    }
 }
