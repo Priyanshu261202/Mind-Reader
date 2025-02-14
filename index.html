@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#9333ea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Mind Reader Wizard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Input Screen -->
+        <div id="inputScreen" class="container">
+            <h1>🔮 Mind Reader</h1>
+            <p>Think of a number between 1 and 10</p>
+            <input type="number" id="numberInput" min="1" max="10" required placeholder="Enter your number" inputmode="numeric" pattern="[0-9]*">
+            <button onclick="startReading()">Read My Mind</button>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loadingScreen" class="container hidden">
+            <h2>Deep Neural Thinking Wizard</h2>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <p id="loadingText" class="loading-text"></p>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="resultScreen" class="container hidden">
+            <div class="sparkles">✨</div>
+            <h2>The number you thought was...</h2>
+            <p id="resultNumber" class="result-number"></p>
+            <button onclick="resetGame()">Try Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
