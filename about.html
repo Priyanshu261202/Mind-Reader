@@ -6,10 +6,9 @@
   <title>About Me - Priyanshu Shakya</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;700&family=Poppins:wght@400;600&display=swap">
   <style>
-
     body {
       font-family: 'Poppins', sans-serif;
-      background: #9333ea;
+      background: linear-gradient(135deg, #9333ea, #7e22ce);
       color: #f4f1e9;
       margin: 0;
       padding: 0;
@@ -22,7 +21,7 @@
     }
 
     .container {
-      background: rgb(26, 57, 42);
+      background: rgba(26, 57, 42, 0.9);
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
@@ -30,6 +29,7 @@
       max-width: 800px;
       width: 90%;
       animation: fadeIn 1s ease-in-out;
+      backdrop-filter: blur(10px);
     }
 
     h1 {
@@ -81,7 +81,6 @@
       transform: scale(0.98);
     }
 
-    
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -93,29 +92,6 @@
       }
     }
 
-    
-    body::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      z-index: -1;
-      background: repeating-conic-gradient(
-        from 0deg,
-        #9333ea 0deg 10deg,
-        #7e22ce 10deg 20deg
-      );
-      animation: rotate 60s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5em;
