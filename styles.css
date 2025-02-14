@@ -281,7 +281,7 @@ button:active {
 }
 
 .card {
-    margin-top: 80px; 
+    margin-top: 40px; 
 }
 
 @media (max-width: 768px) {
@@ -290,8 +290,8 @@ button:active {
     }
 
     .about-link {
-        font-size: 0.9em;
-        padding: 5px 12px;
+        font-size: 1em;
+        padding: 7px 14px;
     }
 
     .card {
