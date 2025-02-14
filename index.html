@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#9333ea">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Mind Reader Wizard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="nav-bar">
+        <a href="about.html" class="about-link">About Me</a>
+    </nav>
     <div class="card">
-        <!-- Input Screen -->
+        
         <div id="inputScreen" class="container">
-            <h1>🔮 Priyanshu's Mind Reader</h1>
+            <h1>🔮 Mind Reader</h1>
             <p>Think of a number between 1 and 10</p>
             <input type="number" id="numberInput" min="1" max="10" required placeholder="Enter your number" inputmode="numeric" pattern="[0-9]*">
             <button onclick="startReading()">Read My Mind</button>
         </div>
 
-        <!-- Loading Screen -->
+        
         <div id="loadingScreen" class="container hidden">
             <h2>Deep Neural Thinking Wizard</h2>
             <div class="progress-container">
@@ -28,7 +29,6 @@
             <p id="loadingText" class="loading-text"></p>
         </div>
 
-        <!-- Result Screen -->
         <div id="resultScreen" class="container hidden">
             <div class="sparkles">✨</div>
             <h2>The number you thought was...</h2>
