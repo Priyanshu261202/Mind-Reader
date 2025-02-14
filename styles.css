@@ -255,7 +255,7 @@ button:active {
 }
 .nav-bar {
     position: fixed;
-    top: 20%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -280,11 +280,9 @@ button:active {
     transform: translateY(-2px);
 }
 
-
 .card {
     margin-top: 80px; 
 }
-
 
 @media (max-width: 768px) {
     .nav-bar {
@@ -297,7 +295,7 @@ button:active {
     }
 
     .card {
-        margin-top: 70px;
+        margin-top: 100px;
     }
 }
 
@@ -312,6 +310,6 @@ button:active {
     }
 
     .card {
-        margin-top: 60px;
+        margin-top: 120px;
     }
 }
