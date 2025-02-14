@@ -25,7 +25,7 @@
     --input-bg: #f8fafc;
 }
 
-/* Body styles */
+
 body {
     min-height: 100vh;
    
@@ -39,7 +39,7 @@ body {
     margin: 0;
 }
 
-/* Card container */
+
 .card {
     background: var(--card-bg);
     border-radius: 20px;
@@ -51,7 +51,7 @@ body {
     isolation: isolate;
 }
 
-/* Container utilities */
+
 .container {
     text-align: center;
 }
@@ -82,7 +82,7 @@ p {
     line-height: 1.5;
 }
 
-/* Input */
+
 input {
     width: 100%;
     padding: 16px;
@@ -150,7 +150,7 @@ button {
     border-radius: 10px;
 }
 
-/* Loading text */
+
 .loading-text {
     min-height: 60px;
     display: flex;
@@ -161,7 +161,6 @@ button {
     padding: 0 10px;
 }
 
-/* Result*/
 .result-number {
     font-size: clamp(48px, 15vw, 72px);
     font-weight: bold;
@@ -280,6 +279,7 @@ button:active {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
+
 
 .card {
     margin-top: 80px; 
