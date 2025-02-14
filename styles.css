@@ -254,7 +254,6 @@ button:active {
     }
 }
 
-
 .nav-bar {
     position: fixed;
     top: 20px;
@@ -283,13 +282,13 @@ button:active {
 }
 
 .card {
-    margin-top: 40px; 
+    margin-top: 40px;
 }
 
 @media (max-width: 768px) {
     .nav-bar {
         padding: 8px 15px;
-        top: 15px;
+        top: 35px;
     }
 
     .about-link {
@@ -298,14 +297,14 @@ button:active {
     }
 
     .card {
-        margin-top: 100px;
+        margin-top: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .nav-bar {
         padding: 5px 10px;
-        top: 10px;
+        top: 45px;
     }
 
     .about-link {
@@ -314,6 +313,13 @@ button:active {
     }
 
     .card {
-        margin-top: 120px;
+        margin-top: 80px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .card {
+        margin: 10px;
+        padding: 16px;
     }
 }
